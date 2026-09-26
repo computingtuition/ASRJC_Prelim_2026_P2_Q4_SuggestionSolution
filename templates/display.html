@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Interface</title>
+    <style>
+        body {
+            background-color: #98FF98;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display</h1>
+
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Student Gender</th>
+            <th>Student Role</th>
+            <th>Room ID</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+
+            {% if row[2] == 1 %}
+                <td>Leader</td>
+            {% else %}
+                <td>Member</td>
+            {% endif %}
+
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <p><a href="/">Update interface</a></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Interface</title>
+</head>
+<body>
+    <h1>Update</h1>
+
+    <p><a href="/refresh/">Click to reset database to initial state before/after testing</a> <i>(This link is not needed for the question itself)</i></p>
+
+    <form method="POST" action="/process_form/">
+        <p>Name: <input name="name"></p>
+        <p>New Room_ID: <input name="room_id"></p>
+        <p><input type="submit"></p>
+    </form>
+
+    <!-- will be left blank if message doesn't exist -->
+    <p>{{ message }}</p>
+
+    <p><a href="/display/">Display interface</a></p>
+</body>
+</html>
